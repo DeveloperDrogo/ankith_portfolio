@@ -11,9 +11,9 @@ const Hero = () => {
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-purple-600 to-pink-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10"></div>
 
             <div className="container-custom mx-auto px-6 py-20 relative z-10">
-                <div className="grid md:grid-cols-2 gap-12 items-center">
+                <div className="grid md:grid-cols-2 gap-12 items-center md:items-stretch">
                     {/* Left Content */}
-                    <div className="text-left space-y-6">
+                    <div className="text-left space-y-6 relative z-20">
                         <p className="hero-text-item text-purple-400 text-lg font-medium">Hi, I am</p>
                         <h1 className="hero-text-item font-display font-black">
                             <span className="gradient-text">ANKITH</span>
@@ -106,13 +106,13 @@ const Hero = () => {
                     </div>
 
                     {/* Right Content - Image */}
-                    <div className="hero-image-container flex items-end justify-center">
-                        <div className="relative">
+                    <div className="hero-image-container relative flex items-end justify-center md:absolute md:right-0 md:bottom-0 md:top-0 md:w-1/2">
+                        <div className="relative w-full h-full flex items-end justify-center">
                             <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-orange-500 rounded-full blur-3xl opacity-30 animate-pulse"></div>
                             <img
                                 src={ankithPhoto}
                                 alt="Ankith"
-                                className="hero-image relative w-full max-w-lg h-auto object-cover object-bottom drop-shadow-2xl"
+                                className="hero-image relative w-full max-w-sm md:max-w-none object-cover object-bottom drop-shadow-2xl"
                             />
                         </div>
                     </div>
