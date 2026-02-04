@@ -45,16 +45,16 @@ const Skills = () => {
                 </div>
 
                 {/* Main Skills Grid */}
-                <div className="skills-grid grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-16">
+                <div className="skills-grid grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6 mb-16">
                     {skills.map((skill, index) => (
                         <div
                             key={index}
-                            className="skill-card glass-purple rounded-2xl p-6 card-hover group flex items-center gap-4"
+                            className="skill-card glass-purple rounded-2xl p-3 sm:p-4 md:p-6 card-hover group flex items-center gap-3 sm:gap-4"
                         >
-                            <div className={`text-4xl p-3 rounded-xl bg-gradient-to-br ${skill.color} text-white inline-block shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                            <div className={`text-2xl sm:text-3xl md:text-4xl p-2 sm:p-3 rounded-xl bg-gradient-to-br ${skill.color} text-white inline-block shadow-lg group-hover:scale-110 transition-transform duration-300 flex-shrink-0`}>
                                 {skill.icon}
                             </div>
-                            <h4 className="text-white font-bold text-lg">{skill.name}</h4>
+                            <h4 className="text-white font-bold text-sm sm:text-base md:text-lg">{skill.name}</h4>
                         </div>
                     ))}
                 </div>
